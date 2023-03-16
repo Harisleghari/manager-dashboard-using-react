@@ -1,4 +1,4 @@
-.sidebar {
+.main-sidebar {
     background-color: #ffffff;
 }
 
@@ -7,11 +7,39 @@
 }
 
 .custom-menu {
-    position: sticky;
-    left: 205px;
-    top: 50px;
-    z-index: 1;
+    float: right;
+    
 }
 
-/* #sidebarCollapse {
-} */
+.sidebar-button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+  .sidebar {
+    position: absolute;
+    top: 0px;
+    left: -15vw;
+    height: 100%;
+    width: 15vw;
+    transition: left 0.3s ease-in-out;
+    background-color: #ffffff;      
+  }
+  .sidebar-toggle {
+    position: absolute;
+    top: 10%;
+    right: -40px;
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    border: none;
+    background-color: #ffffff;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .content.open {
+    left: 15vw;
+  }
+  

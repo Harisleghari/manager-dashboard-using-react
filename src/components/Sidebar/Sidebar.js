@@ -1,50 +1,139 @@
-// import React, { useState } from 'react'; // Import React and useState hook
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon component
-// import { faBars, faHome, faChartBar, faTh, faCog, faEnvelope } from '@fortawesome/free-solid-svg-icons'; // Import required Fontawesome icons
-// import { Container, Row, Col, Button } from 'react-bootstrap'; // Import Bootstrap components
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserPlus,
+  faUsers,
+  faUser,
+  faUserLarge,
+  faGear,
+  faChevronLeft,
+  faCircleChevronLeft,
+  faCircleChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
-// const Sidebar = () => {
-//     return (
-//         <div className="sidebar" style={{ display: showSidebar ? "block" : "none" }}>
-//          <div className="sidebar-header">
-//            <h2>Dashboard</h2>
-//            <Button variant="link" onClick={toggleSidebar}>
-//              <FontAwesomeIcon icon={faBars} />
-//            </Button>
-//          </div>
-//          <ul>
-//            <li>
-//              <a href="#">
-//                <FontAwesomeIcon icon={faHome} />
-//                <span>Home</span>
-//              </a>
-//            </li>
-//            <li>
-//              <a href="#">
-//                <FontAwesomeIcon icon={faChartBar} />
-//                <span>Dashboard</span>
-//              </a>
-//            </li>
-//            <li>
-//              <a href="#">
-//                <FontAwesomeIcon icon={faTh} />
-//                <span>Widgets</span>
-//              </a>
-//            </li>
-//            <li>
-//              <a href="#">
-//               <span>Settings</span>
-//              </a>
-//            </li>
-//            <li>
-//              <a href="#">
-//                <FontAwesomeIcon icon={faEnvelope} />
-//                <span>Messages</span>
-//              </a>
-//            </li>
-//          </ul>
-//        </div>
-//     )
-// }
+const SideBar = props => {
+  const sidebarClass = props.isOpen ? "sidebar open" : "sidebar";
+  return (
+    <div className={sidebarClass}>
+      <div>
+            <div>
+              <img
+                src="https://enableu.com/wp-content/uploads/2022/08/Enable-u-Logo.svg"
+                alt="logo"
+              ></img>
+            </div>
+            
+              <div className="custom-menu" style={{display: props.isOpen? "block" : "inline"}}>
+              
+              
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUserPlus} />
+              </span>
+              Executive
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUsers} />
+              </span>
+              Manager
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              Individual
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUserLarge} />
+              </span>
+              Super Admin
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faGear} />
+              </span>
+              Setting
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+      {/* <button onClick={props.toggleSidebar} className="sidebar-toggle">
+        Toggle Sidebar
+      </button> */}
+      <button type="button" onClick={props.toggleSidebar} className="sidebar-toggle">
+                <span className="navbar-toggler-icon" >{ props.isOpen ?<FontAwesomeIcon icon={faCircleChevronLeft} />: <FontAwesomeIcon icon={faCircleChevronRight} />}</span>
+    </button>
+    </div>
 
-// export default Sidebar;
+    {/* <div id="main-sidebar" className="sidebar" style={{ position: "fixed", zIndex: 5, width:"25%"}}>
+          <div>
+            <div>
+              <img
+                src="https://enableu.com/wp-content/uploads/2022/08/Enable-u-Logo.svg"
+                alt="logo"
+              ></img>
+            </div>
+            
+              <div className="custom-menu" style={{display: open? "block" : "inline"}}>
+              
+              
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUserPlus} />
+              </span>
+              Executive
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUsers} />
+              </span>
+              Manager
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUser} />
+              </span>
+              Individual
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faUserLarge} />
+              </span>
+              Super Admin
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+            <div className="m-2">
+              <span className="m-2">
+                <FontAwesomeIcon icon={faGear} />
+              </span>
+              Setting
+              <span style={{ float: "right" }}>
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </span>
+            </div>
+          </div> */}
+        </div>
+  );
+};
+export default SideBar;
