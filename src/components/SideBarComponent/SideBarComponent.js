@@ -11,7 +11,7 @@ import {
   faCircleChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const SideBar = props => {
+const SideBarComponent = props => {
   const sidebarClass = props.isOpen ? "sidebar open" : "sidebar";
   return (
     <div className={sidebarClass}>
@@ -81,4 +81,4 @@ const SideBar = props => {
         </div>
   );
 };
-export default SideBar;
+export default SideBarComponent;
