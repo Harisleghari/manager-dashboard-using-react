@@ -77,62 +77,7 @@ const SideBar = props => {
     </button>
     </div>
 
-    {/* <div id="main-sidebar" className="sidebar" style={{ position: "fixed", zIndex: 5, width:"25%"}}>
-          <div>
-            <div>
-              <img
-                src="https://enableu.com/wp-content/uploads/2022/08/Enable-u-Logo.svg"
-                alt="logo"
-              ></img>
-            </div>
-            
-              <div className="custom-menu" style={{display: open? "block" : "inline"}}>
-              
-              
-            </div>
-            <div className="m-2">
-              <span className="m-2">
-                <FontAwesomeIcon icon={faUserPlus} />
-              </span>
-              Executive
-            </div>
-            <div className="m-2">
-              <span className="m-2">
-                <FontAwesomeIcon icon={faUsers} />
-              </span>
-              Manager
-              <span style={{ float: "right" }}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </span>
-            </div>
-            <div className="m-2">
-              <span className="m-2">
-                <FontAwesomeIcon icon={faUser} />
-              </span>
-              Individual
-              <span style={{ float: "right" }}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </span>
-            </div>
-            <div className="m-2">
-              <span className="m-2">
-                <FontAwesomeIcon icon={faUserLarge} />
-              </span>
-              Super Admin
-              <span style={{ float: "right" }}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </span>
-            </div>
-            <div className="m-2">
-              <span className="m-2">
-                <FontAwesomeIcon icon={faGear} />
-              </span>
-              Setting
-              <span style={{ float: "right" }}>
-                <FontAwesomeIcon icon={faChevronLeft} />
-              </span>
-            </div>
-          </div> */}
+    
         </div>
   );
 };
